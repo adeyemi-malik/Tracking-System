@@ -1,0 +1,67 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model LoginViewModel
+
+@section styles
+{
+    <link rel="stylesheet" href="~/css/pages/login-v3.css" />
+}
+<div class="page-login-v3">
+    <!-- Page -->
+    <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
+        <div class="page-content vertical-align-middle">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="brand">
+                        <img class="brand-img" src="../../assets//images/logo-blue.png" alt="...">
+                        <h2 class="brand-text font-size-18">Tracking System</h2>
+                    </div>
+                    <form asp-route-returnurl="@ViewData["ReturnUrl"]" asp-action="login" method="post" autocomplete="off">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input asp-for="UserName" class="form-control" />
+                            <label class="floating-label" asp-for="UserName"></label>
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input class="form-control" asp-for="Password"/>
+                            <label asp-for="Password" class="floating-label"></label>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group clearfix">
+                            <div class="checkbox-custom checkbox-inline checkbox-primary checkbox-lg float-left">
+                                <input asp-for="RememberMe" id="inputCheckbox">
+                                <label asp-for="RememberMe"></label>
+                            </div>
+                            <a class="float-right" asp-action="forgotpassword">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-40">Sign in</button>
+                    </form>
+                    <p>Still no account? Please go to <a asp-action="register" asp-route-returnurl="@ViewData["ReturnUrl"]">Sign up</a></p>
+                </div>
+            </div>
+            <footer class="page-copyright page-copyright-inverse">
+                <p>Application BY Adeyemi Malik</p>
+                <p>© @DateTime.Now.Year. All RIGHT RESERVED.</p>
+                <div class="social">
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-google-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- End Page -->
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

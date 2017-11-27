@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <title>@ViewData["Title"] | TrackingSystem</title>
+
+
+    <environment include="Development">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="~/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/bootstrap-extend.css">
+        <link rel="stylesheet" href="~/css/site.css" />
+
+
+        <!-- Plugins -->
+        <link rel="stylesheet" href="~/vendor/animsition/animsition.css">
+        <link rel="stylesheet" href="~/vendor/asscrollable/asScrollable.css">
+        <link rel="stylesheet" href="~/vendor/switchery/switchery.css">
+        <link rel="stylesheet" href="~/vendor/intro-js/introjs.css">
+        <link rel="stylesheet" href="~/vendor/slidepanel/slidePanel.css">
+        <link rel="stylesheet" href="~/vendor/flag-icon-css/flag-icon.css">
+        <link rel="stylesheet" href="~/vendor/waves/waves.css">
+
+        @RenderSection("styles", required: false)
+
+
+
+       
+        <!-- Fonts -->
+        <link rel="stylesheet" href="~/fonts/material-design/material-design.css">
+        <link rel="stylesheet" href="~/fonts/brand-icons/brand-icons.css">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+        <!--[if lt IE 9]>
+        <script src="~/vendor/html5shiv/html5shiv.js"></script>
+        <![endif]-->
+        <!--[if lt IE 10]>
+        <script src="~/vendor/media-match/media.match.js"></script>
+        <script src="~/vendor/respond/respond.js"></script>
+        <![endif]-->
+        <!-- Scripts -->
+        <script src="~/vendor/breakpoints/breakpoints.js"></script>
+        <script>
+            Breakpoints();
+        </script>
+    </environment>
+    <environment exclude="Development">
+        @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+            asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+            asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />*@
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/bootstrap-extend.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+        <!-- Plugins -->
+        <link rel="stylesheet" href="~/vendor/animsition/animsition.min.css">
+        <link rel="stylesheet" href="~/vendor/asscrollable/asScrollable.min.css">
+        <link rel="stylesheet" href="~/vendor/switchery/switchery.min.css">
+        <link rel="stylesheet" href="~/vendor/intro-js/introjs.min.css">
+        <link rel="stylesheet" href="~/vendor/slidepanel/slidePanel.min.css">
+        <link rel="stylesheet" href="~/vendor/flag-icon-css/flag-icon.min.css">
+        <link rel="stylesheet" href="~/vendor/waves/waves.min.css">
+
+        @RenderSection("styles", required: false)
+
+
+
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="~/fonts/material-design/material-design.min.css">
+        <link rel="stylesheet" href="~/fonts/brand-icons/brand-icons.min.css">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+        <!--[if lt IE 9]>
+        <script src="~/vendor/html5shiv/html5shiv.min.js"></script>
+        <![endif]-->
+        <!--[if lt IE 10]>
+        <script src="~/vendor/media-match/media.match.min.js"></script>
+        <script src="~/vendor/respond/respond.min.js"></script>
+        <![endif]-->
+        <!-- Scripts -->
+        <script src="~/vendor/breakpoints/breakpoints.min.js"></script>
+        <script>
+            Breakpoints();
+        </script>
+    </environment>
+</head>
+<body class="animsition layout-full" >
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    @RenderBody()
+
+
+    <environment include="Development">
+
+        <!-- Core  -->
+        <script src="~/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+        <script src="~/vendor/jquery/jquery.js"></script>
+        <script src="~/vendor/tether/tether.js"></script>
+        <script src="~/vendor/bootstrap/bootstrap.js"></script>
+        <script src="~/vendor/animsition/animsition.js"></script>
+        <script src="~/vendor/mousewheel/jquery.mousewheel.js"></script>
+        <script src="~/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+        <script src="~/vendor/asscrollable/jquery-asScrollable.js"></script>
+        <script src="~/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+        <script src="~/vendor/waves/waves.js"></script>
+        <!-- Plugins -->
+        <script src="~/vendor/switchery/switchery.js"></script>
+        <script src="~/vendor/intro-js/intro.js"></script>
+        <script src="~/vendor/screenfull/screenfull.js"></script>
+        <script src="~/vendor/slidepanel/jquery-slidePanel.js"></script>
+        <script src="~/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+
+      
+        <!-- Scripts -->
+        <script src="~/js/State.js"></script>
+        <script src="~/js/Component.js"></script>
+        <script src="~/js/Plugin.js"></script>
+        <script src="~/js/Base.js"></script>
+        <script src="~/js/Config.js"></script>
+        <script src="~/js/Section/Menubar.js"></script>
+        <script src="~/js/Section/GridMenu.js"></script>
+        <script src="~/js/Section/Sidebar.js"></script>
+        <script src="~/js/Section/PageAside.js"></script>
+        <script src="~/js/Plugin/menu.js"></script>
+        <script src="~/js/config/colors.js"></script>
+        <script src="~/js/config/tour.js"></script>
+        <script>
+            Config.set('assets', '../assets');
+        </script>
+
+        <!-- Page -->
+        <script src="~/js/Site.js"></script>
+        <script src="~/js/Plugin/asscrollable.js"></script>
+        <script src="~/js/Plugin/slidepanel.js"></script>
+        <script src="~/js/Plugin/switchery.js"></script>
+        <script src="~/js/Plugin/jquery-placeholder.js"></script>
+        <script src="~/js/Plugin/material.js"></script>
+
+    </environment>
+    <environment exclude="Development">       
+        <!-- Core  -->
+        <script src="~/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+        <script src="~/vendor/jquery/jquery.min.js"></script>
+        <script src="~/vendor/tether/tether.min.js"></script>
+        <script src="~/vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="~/vendor/animsition/animsition.min.js"></script>
+        <script src="~/vendor/mousewheel/jquery.mousewheel.min.js"></script>
+        <script src="~/vendor/asscrollbar/jquery-asScrollbar.min.js"></script>
+        <script src="~/vendor/asscrollable/jquery-asScrollable.min.js"></script>
+        <script src="~/vendor/ashoverscroll/jquery-asHoverScroll.min.js"></script>
+        <script src="~/vendor/waves/waves.min.js"></script>
+        <!-- Plugins -->
+        <script src="~/vendor/switchery/switchery.min.js"></script>
+        <script src="~/vendor/intro-js/intro.min.js"></script>
+        <script src="~/vendor/screenfull/screenfull.min.js"></script>
+        <script src="~/vendor/slidepanel/jquery-slidePanel.min.js"></script>
+        <script src="~/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
+
+        <!-- Scripts -->
+        <script src="~/js/State.min.js"></script>
+        <script src="~/js/Component.min.js"></script>
+        <script src="~/js/Plugin.min.js"></script>
+        <script src="~/js/Base.min.js"></script>
+        <script src="~/js/Config.min.js"></script>
+        <script src="~/js/Section/Menubar.min.js"></script>
+        <script src="~/js/Section/GridMenu.min.js"></script>
+        <script src="~/js/Section/Sidebar.min.js"></script>
+        <script src="~/js/Section/PageAside.min.js"></script>
+        <script src="~/js/Plugin/menu.min.js"></script>
+        <script src="~/js/config/colors.min.js"></script>
+        <script src="~/js/config/tour.min.js"></script>
+        <script>
+            Config.set('assets', '../assets');
+        </script>
+
+        <!-- Page -->
+        <script src="~/js/site.min.js"></script>
+        <script src="~/js/Plugin/asscrollable.min.js"></script>
+        <script src="~/js/Plugin/slidepanel.min.js"></script>
+        <script src="~/js/Plugin/switchery.min.js"></script>
+        <script src="~/js/Plugin/jquery-placeholder.min.js"></script>
+        <script src="~/js/Plugin/material.min.js"></script>
+       
+    </environment>
+
+    <script>
+            (function (document, window, $) {
+                'use strict';
+                var Site = window.Site;
+                $(document).ready(function () {
+                    Site.run();
+                });
+            })(document, window, jQuery);
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿@model RegisterViewModel
+
+@section styles
+{
+    <link rel="stylesheet" href="~/css/pages/register-v3.css" />
+}
+
+<div class="page-register-v3">
+    <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
+        <div class="page-content vertical-align-middle">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="brand">
+                        <img class="brand-img" src="../../assets//images/logo-blue.png" alt="...">
+                        <h2 class="brand-text font-size-18">Tracking System</h2>
+                    </div>
+                    <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post"  autocomplete="off">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input asp-for="UserName" class="form-control" />
+                            <label asp-for="UserName" class="floating-label"></label>
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-material floating row" data-plugin="formMaterial">
+                            <div class="col-md-6">
+                                <input asp-for="FirstName" class="form-control" />
+                                <label asp-for="FirstName" class="floating-label"></label>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <input asp-for="LastName" class="form-control" />
+                                <label asp-for="LastName" class="floating-label"></label>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-material floating row" data-plugin="formMaterial">
+                            <div class="col-md-6">
+                                <input asp-for="OtherName" class="form-control" />
+                                <label asp-for="OtherName" class="floating-label"></label>
+                                <span asp-validation-for="OtherName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <input asp-for="Phone" class="form-control" />
+                                <label asp-for="Phone" class="floating-label"></label>
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input asp-for="Email" class="form-control" />
+                            <label asp-for="Email" class="floating-label"></label>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-material floating row" data-plugin="formMaterial">
+                            <div class="col-md-6">
+                                <input asp-for="Password" class="form-control" />
+                                <label asp-for="Password" class="floating-label"></label>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <input asp-for="ConfirmPassword" class="form-control" />
+                                <label asp-for="ConfirmPassword" class="floating-label"></label>
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input asp-for="Address" class="form-control" />
+                            <label asp-for="Address" class="floating-label"></label>
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg mt-40">Sign up</button>
+                    </form>
+                    <p>Have account already? Please go to <a asp-action="login" >Sign In</a></p>
+                </div>
+            </div>
+            <footer class="page-copyright page-copyright-inverse">
+                <p>Application BY Adeyemi Malik</p>
+                <p>© @DateTime.Now.Year. All RIGHT RESERVED.</p>
+                <div class="social">
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-icon btn-pure" href="javascript:void(0)">
+                        <i class="icon bd-google-plus" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

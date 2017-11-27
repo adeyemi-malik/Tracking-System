@@ -1,0 +1,460 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-TrackingSystem-0093510B-E84E-49AB-8F79-9446BC152662</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ASPNET_Core_1_0\**" />
+    <Compile Remove="wwwroot\font-awesome\**" />
+    <Content Remove="ASPNET_Core_1_0\**" />
+    <Content Remove="wwwroot\font-awesome\**" />
+    <EmbeddedResource Remove="ASPNET_Core_1_0\**" />
+    <EmbeddedResource Remove="wwwroot\font-awesome\**" />
+    <None Remove="ASPNET_Core_1_0\**" />
+    <None Remove="wwwroot\font-awesome\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\site.js" />
+    <Content Remove="wwwroot\js\site.min.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Core" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrackingSystemBLayer\TrackingSystemBLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Shared\Error.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_Layout.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_LoginPartial.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_Navigation.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_NavigationOffCanvas.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_RightSidebar.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_SkinConfig.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_TopNavbar.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_TopNavbar2.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Views\Shared\_ValidationScriptsPartial.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="base\NewFolder\" />
+    <Folder Include="Models\TokenViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\advanced\alertify.css" />
+    <None Include="wwwroot\css\advanced\alertify.min.css" />
+    <None Include="wwwroot\css\advanced\animation.css" />
+    <None Include="wwwroot\css\advanced\animation.min.css" />
+    <None Include="wwwroot\css\advanced\highlight.css" />
+    <None Include="wwwroot\css\advanced\highlight.min.css" />
+    <None Include="wwwroot\css\advanced\lightbox.css" />
+    <None Include="wwwroot\css\advanced\lightbox.min.css" />
+    <None Include="wwwroot\css\advanced\masonry.css" />
+    <None Include="wwwroot\css\advanced\masonry.min.css" />
+    <None Include="wwwroot\css\advanced\rating.css" />
+    <None Include="wwwroot\css\advanced\rating.min.css" />
+    <None Include="wwwroot\css\advanced\scrollable.css" />
+    <None Include="wwwroot\css\advanced\scrollable.min.css" />
+    <None Include="wwwroot\css\advanced\toastr.css" />
+    <None Include="wwwroot\css\advanced\toastr.min.css" />
+    <None Include="wwwroot\css\apps\calendar.css" />
+    <None Include="wwwroot\css\apps\calendar.min.css" />
+    <None Include="wwwroot\css\apps\contacts.css" />
+    <None Include="wwwroot\css\apps\contacts.min.css" />
+    <None Include="wwwroot\css\apps\documents.css" />
+    <None Include="wwwroot\css\apps\documents.min.css" />
+    <None Include="wwwroot\css\apps\forum.css" />
+    <None Include="wwwroot\css\apps\forum.min.css" />
+    <None Include="wwwroot\css\apps\location.css" />
+    <None Include="wwwroot\css\apps\location.min.css" />
+    <None Include="wwwroot\css\apps\mailbox.css" />
+    <None Include="wwwroot\css\apps\mailbox.min.css" />
+    <None Include="wwwroot\css\apps\media.css" />
+    <None Include="wwwroot\css\apps\media.min.css" />
+    <None Include="wwwroot\css\apps\message.css" />
+    <None Include="wwwroot\css\apps\message.min.css" />
+    <None Include="wwwroot\css\apps\notebook.css" />
+    <None Include="wwwroot\css\apps\notebook.min.css" />
+    <None Include="wwwroot\css\apps\projects.css" />
+    <None Include="wwwroot\css\apps\projects.min.css" />
+    <None Include="wwwroot\css\apps\taskboard.css" />
+    <None Include="wwwroot\css\apps\taskboard.min.css" />
+    <None Include="wwwroot\css\apps\travel.css" />
+    <None Include="wwwroot\css\apps\travel.min.css" />
+    <None Include="wwwroot\css\apps\work.css" />
+    <None Include="wwwroot\css\apps\work.min.css" />
+    <None Include="wwwroot\css\charts\chartist.css" />
+    <None Include="wwwroot\css\charts\chartist.min.css" />
+    <None Include="wwwroot\css\charts\chartjs.css" />
+    <None Include="wwwroot\css\charts\chartjs.min.css" />
+    <None Include="wwwroot\css\charts\flot.css" />
+    <None Include="wwwroot\css\charts\flot.min.css" />
+    <None Include="wwwroot\css\charts\pie-progress.css" />
+    <None Include="wwwroot\css\charts\pie-progress.min.css" />
+    <None Include="wwwroot\css\charts\sparkline.css" />
+    <None Include="wwwroot\css\charts\sparkline.min.css" />
+    <None Include="wwwroot\css\dashboard\v1.css" />
+    <None Include="wwwroot\css\dashboard\v1.min.css" />
+    <None Include="wwwroot\css\forms\advanced.css" />
+    <None Include="wwwroot\css\forms\advanced.min.css" />
+    <None Include="wwwroot\css\forms\image-cropping.css" />
+    <None Include="wwwroot\css\forms\image-cropping.min.css" />
+    <None Include="wwwroot\css\forms\layouts.css" />
+    <None Include="wwwroot\css\forms\layouts.min.css" />
+    <None Include="wwwroot\css\forms\masks.css" />
+    <None Include="wwwroot\css\forms\masks.min.css" />
+    <None Include="wwwroot\css\forms\validation.css" />
+    <None Include="wwwroot\css\forms\validation.min.css" />
+    <None Include="wwwroot\css\layouts\headers.css" />
+    <None Include="wwwroot\css\layouts\headers.min.css" />
+    <None Include="wwwroot\css\layouts\page-aside-fixed.css" />
+    <None Include="wwwroot\css\layouts\page-aside-fixed.min.css" />
+    <None Include="wwwroot\css\layouts\panel-transition.css" />
+    <None Include="wwwroot\css\layouts\panel-transition.min.css" />
+    <None Include="wwwroot\css\pages\code-editor.css" />
+    <None Include="wwwroot\css\pages\code-editor.min.css" />
+    <None Include="wwwroot\css\pages\email.css" />
+    <None Include="wwwroot\css\pages\email.min.css" />
+    <None Include="wwwroot\css\pages\errors.css" />
+    <None Include="wwwroot\css\pages\errors.min.css" />
+    <None Include="wwwroot\css\pages\faq.css" />
+    <None Include="wwwroot\css\pages\faq.min.css" />
+    <None Include="wwwroot\css\pages\forgot-password.css" />
+    <None Include="wwwroot\css\pages\forgot-password.min.css" />
+    <None Include="wwwroot\css\pages\gallery-grid.css" />
+    <None Include="wwwroot\css\pages\gallery-grid.min.css" />
+    <None Include="wwwroot\css\pages\gallery.css" />
+    <None Include="wwwroot\css\pages\gallery.min.css" />
+    <None Include="wwwroot\css\pages\invoice.css" />
+    <None Include="wwwroot\css\pages\invoice.min.css" />
+    <None Include="wwwroot\css\pages\lockscreen.css" />
+    <None Include="wwwroot\css\pages\lockscreen.min.css" />
+    <None Include="wwwroot\css\pages\login-v2.css" />
+    <None Include="wwwroot\css\pages\login-v2.min.css" />
+    <None Include="wwwroot\css\pages\login-v3.css" />
+    <None Include="wwwroot\css\pages\login-v3.min.css" />
+    <None Include="wwwroot\css\pages\login.css" />
+    <None Include="wwwroot\css\pages\login.min.css" />
+    <None Include="wwwroot\css\pages\maintenance.css" />
+    <None Include="wwwroot\css\pages\maintenance.min.css" />
+    <None Include="wwwroot\css\pages\map.css" />
+    <None Include="wwwroot\css\pages\map.min.css" />
+    <None Include="wwwroot\css\pages\profile-v2.css" />
+    <None Include="wwwroot\css\pages\profile-v2.min.css" />
+    <None Include="wwwroot\css\pages\profile.css" />
+    <None Include="wwwroot\css\pages\profile.min.css" />
+    <None Include="wwwroot\css\pages\profile_v3.css" />
+    <None Include="wwwroot\css\pages\profile_v3.min.css" />
+    <None Include="wwwroot\css\pages\project.css" />
+    <None Include="wwwroot\css\pages\project.min.css" />
+    <None Include="wwwroot\css\pages\register-v2.css" />
+    <None Include="wwwroot\css\pages\register-v2.min.css" />
+    <None Include="wwwroot\css\pages\register-v3.css" />
+    <None Include="wwwroot\css\pages\register-v3.min.css" />
+    <None Include="wwwroot\css\pages\register.css" />
+    <None Include="wwwroot\css\pages\register.min.css" />
+    <None Include="wwwroot\css\pages\search-result.css" />
+    <None Include="wwwroot\css\pages\search-result.min.css" />
+    <None Include="wwwroot\css\pages\site-map.css" />
+    <None Include="wwwroot\css\pages\site-map.min.css" />
+    <None Include="wwwroot\css\pages\user.css" />
+    <None Include="wwwroot\css\pages\user.min.css" />
+    <None Include="wwwroot\css\site.css" />
+    <None Include="wwwroot\css\site.min.css" />
+    <None Include="wwwroot\css\structure\alerts.css" />
+    <None Include="wwwroot\css\structure\alerts.min.css" />
+    <None Include="wwwroot\css\structure\breadcrumbs.css" />
+    <None Include="wwwroot\css\structure\breadcrumbs.min.css" />
+    <None Include="wwwroot\css\structure\chat.css" />
+    <None Include="wwwroot\css\structure\chat.min.css" />
+    <None Include="wwwroot\css\structure\navbars.css" />
+    <None Include="wwwroot\css\structure\navbars.min.css" />
+    <None Include="wwwroot\css\structure\pagination.css" />
+    <None Include="wwwroot\css\structure\pagination.min.css" />
+    <None Include="wwwroot\css\structure\ribbon.css" />
+    <None Include="wwwroot\css\structure\ribbon.min.css" />
+    <None Include="wwwroot\css\structure\testimonials.css" />
+    <None Include="wwwroot\css\structure\testimonials.min.css" />
+    <None Include="wwwroot\css\structure\timeline.css" />
+    <None Include="wwwroot\css\structure\timeline.min.css" />
+    <None Include="wwwroot\css\tables\basic.css" />
+    <None Include="wwwroot\css\tables\basic.min.css" />
+    <None Include="wwwroot\css\tables\datatable.css" />
+    <None Include="wwwroot\css\tables\datatable.min.css" />
+    <None Include="wwwroot\css\tables\floatthead.css" />
+    <None Include="wwwroot\css\tables\floatthead.min.css" />
+    <None Include="wwwroot\css\tables\footable.css" />
+    <None Include="wwwroot\css\tables\footable.min.css" />
+    <None Include="wwwroot\css\tables\jsgrid.css" />
+    <None Include="wwwroot\css\tables\jsgrid.min.css" />
+    <None Include="wwwroot\css\uikit\badges.css" />
+    <None Include="wwwroot\css\uikit\badges.min.css" />
+    <None Include="wwwroot\css\uikit\buttons.css" />
+    <None Include="wwwroot\css\uikit\buttons.min.css" />
+    <None Include="wwwroot\css\uikit\carousel.css" />
+    <None Include="wwwroot\css\uikit\carousel.min.css" />
+    <None Include="wwwroot\css\uikit\colors.css" />
+    <None Include="wwwroot\css\uikit\colors.min.css" />
+    <None Include="wwwroot\css\uikit\dropdowns.css" />
+    <None Include="wwwroot\css\uikit\dropdowns.min.css" />
+    <None Include="wwwroot\css\uikit\icon.css" />
+    <None Include="wwwroot\css\uikit\icon.min.css" />
+    <None Include="wwwroot\css\uikit\icons.css" />
+    <None Include="wwwroot\css\uikit\icons.min.css" />
+    <None Include="wwwroot\css\uikit\images.css" />
+    <None Include="wwwroot\css\uikit\images.min.css" />
+    <None Include="wwwroot\css\uikit\labels.css" />
+    <None Include="wwwroot\css\uikit\labels.min.css" />
+    <None Include="wwwroot\css\uikit\modals.css" />
+    <None Include="wwwroot\css\uikit\modals.min.css" />
+    <None Include="wwwroot\css\uikit\panel-portlets.css" />
+    <None Include="wwwroot\css\uikit\panel-portlets.min.css" />
+    <None Include="wwwroot\css\uikit\progress-bars.css" />
+    <None Include="wwwroot\css\uikit\progress-bars.min.css" />
+    <None Include="wwwroot\css\uikit\tags.css" />
+    <None Include="wwwroot\css\uikit\tags.min.css" />
+    <None Include="wwwroot\css\uikit\tooltip-popover.css" />
+    <None Include="wwwroot\css\uikit\tooltip-popover.min.css" />
+    <None Include="wwwroot\css\uikit\utilities.css" />
+    <None Include="wwwroot\css\uikit\utilities.min.css" />
+    <None Include="wwwroot\css\widgets\chart.css" />
+    <None Include="wwwroot\css\widgets\chart.min.css" />
+    <None Include="wwwroot\css\widgets\data.css" />
+    <None Include="wwwroot\css\widgets\data.min.css" />
+    <None Include="wwwroot\css\widgets\social.css" />
+    <None Include="wwwroot\css\widgets\social.min.css" />
+    <None Include="wwwroot\css\widgets\statistics.css" />
+    <None Include="wwwroot\css\widgets\statistics.min.css" />
+    <None Include="wwwroot\css\widgets\weather.css" />
+    <None Include="wwwroot\css\widgets\weather.min.css" />
+    <None Include="wwwroot\js\advanced\animation.js" />
+    <None Include="wwwroot\js\advanced\animation.min.js" />
+    <None Include="wwwroot\js\advanced\bootbox-sweetalert.js" />
+    <None Include="wwwroot\js\advanced\bootbox-sweetalert.min.js" />
+    <None Include="wwwroot\js\advanced\context-menu.js" />
+    <None Include="wwwroot\js\advanced\context-menu.min.js" />
+    <None Include="wwwroot\js\advanced\highlight.js" />
+    <None Include="wwwroot\js\advanced\highlight.min.js" />
+    <None Include="wwwroot\js\advanced\lightbox.js" />
+    <None Include="wwwroot\js\advanced\lightbox.min.js" />
+    <None Include="wwwroot\js\advanced\maps-google.js" />
+    <None Include="wwwroot\js\advanced\maps-google.min.js" />
+    <None Include="wwwroot\js\advanced\scrollable.js" />
+    <None Include="wwwroot\js\advanced\scrollable.min.js" />
+    <None Include="wwwroot\js\advanced\treeview.js" />
+    <None Include="wwwroot\js\advanced\treeview.min.js" />
+    <None Include="wwwroot\js\apps\calendar.js" />
+    <None Include="wwwroot\js\apps\calendar.min.js" />
+    <None Include="wwwroot\js\apps\contacts.js" />
+    <None Include="wwwroot\js\apps\contacts.min.js" />
+    <None Include="wwwroot\js\apps\documents.js" />
+    <None Include="wwwroot\js\apps\documents.min.js" />
+    <None Include="wwwroot\js\apps\forum.js" />
+    <None Include="wwwroot\js\apps\forum.min.js" />
+    <None Include="wwwroot\js\apps\location.js" />
+    <None Include="wwwroot\js\apps\location.min.js" />
+    <None Include="wwwroot\js\apps\mailbox.js" />
+    <None Include="wwwroot\js\apps\mailbox.min.js" />
+    <None Include="wwwroot\js\apps\media.js" />
+    <None Include="wwwroot\js\apps\media.min.js" />
+    <None Include="wwwroot\js\apps\message.js" />
+    <None Include="wwwroot\js\apps\message.min.js" />
+    <None Include="wwwroot\js\apps\notebook.js" />
+    <None Include="wwwroot\js\apps\notebook.min.js" />
+    <None Include="wwwroot\js\apps\projects.js" />
+    <None Include="wwwroot\js\apps\projects.min.js" />
+    <None Include="wwwroot\js\apps\taskboard.js" />
+    <None Include="wwwroot\js\apps\taskboard.min.js" />
+    <None Include="wwwroot\js\apps\travel.js" />
+    <None Include="wwwroot\js\apps\travel.min.js" />
+    <None Include="wwwroot\js\apps\work.js" />
+    <None Include="wwwroot\js\apps\work.min.js" />
+    <None Include="wwwroot\js\App\Calendar.js" />
+    <None Include="wwwroot\js\App\Calendar.min.js" />
+    <None Include="wwwroot\js\App\Contacts.js" />
+    <None Include="wwwroot\js\App\Contacts.min.js" />
+    <None Include="wwwroot\js\App\Documents.js" />
+    <None Include="wwwroot\js\App\Documents.min.js" />
+    <None Include="wwwroot\js\App\Forum.js" />
+    <None Include="wwwroot\js\App\Forum.min.js" />
+    <None Include="wwwroot\js\App\Location.js" />
+    <None Include="wwwroot\js\App\Location.min.js" />
+    <None Include="wwwroot\js\App\Mailbox.js" />
+    <None Include="wwwroot\js\App\Mailbox.min.js" />
+    <None Include="wwwroot\js\App\Media.js" />
+    <None Include="wwwroot\js\App\Media.min.js" />
+    <None Include="wwwroot\js\App\Message.js" />
+    <None Include="wwwroot\js\App\Message.min.js" />
+    <None Include="wwwroot\js\App\Notebook.js" />
+    <None Include="wwwroot\js\App\Notebook.min.js" />
+    <None Include="wwwroot\js\App\Projects.js" />
+    <None Include="wwwroot\js\App\Projects.min.js" />
+    <None Include="wwwroot\js\App\Taskboard.js" />
+    <None Include="wwwroot\js\App\Taskboard.min.js" />
+    <None Include="wwwroot\js\App\Travel.js" />
+    <None Include="wwwroot\js\App\Travel.min.js" />
+    <None Include="wwwroot\js\App\Work.js" />
+    <None Include="wwwroot\js\App\Work.min.js" />
+    <None Include="wwwroot\js\BaseApp.js" />
+    <None Include="wwwroot\js\BaseApp.min.js" />
+    <None Include="wwwroot\js\charts\c3.js" />
+    <None Include="wwwroot\js\charts\c3.min.js" />
+    <None Include="wwwroot\js\charts\chartist.js" />
+    <None Include="wwwroot\js\charts\chartist.min.js" />
+    <None Include="wwwroot\js\charts\chartjs.js" />
+    <None Include="wwwroot\js\charts\chartjs.min.js" />
+    <None Include="wwwroot\js\charts\flot.js" />
+    <None Include="wwwroot\js\charts\flot.min.js" />
+    <None Include="wwwroot\js\charts\gauges.js" />
+    <None Include="wwwroot\js\charts\gauges.min.js" />
+    <None Include="wwwroot\js\charts\morris.js" />
+    <None Include="wwwroot\js\charts\morris.min.js" />
+    <None Include="wwwroot\js\charts\peity.js" />
+    <None Include="wwwroot\js\charts\peity.min.js" />
+    <None Include="wwwroot\js\charts\pie-progress.js" />
+    <None Include="wwwroot\js\charts\pie-progress.min.js" />
+    <None Include="wwwroot\js\charts\rickshaw.js" />
+    <None Include="wwwroot\js\charts\rickshaw.min.js" />
+    <None Include="wwwroot\js\charts\sparkline.js" />
+    <None Include="wwwroot\js\charts\sparkline.min.js" />
+    <None Include="wwwroot\js\config\tour.js" />
+    <None Include="wwwroot\js\config\tour.min.js" />
+    <None Include="wwwroot\js\dashboard\v1.js" />
+    <None Include="wwwroot\js\dashboard\v1.min.js" />
+    <None Include="wwwroot\js\forms\advanced.js" />
+    <None Include="wwwroot\js\forms\advanced.min.js" />
+    <None Include="wwwroot\js\forms\editable.js" />
+    <None Include="wwwroot\js\forms\editable.min.js" />
+    <None Include="wwwroot\js\forms\editor-summernote.js" />
+    <None Include="wwwroot\js\forms\editor-summernote.min.js" />
+    <None Include="wwwroot\js\forms\general.js" />
+    <None Include="wwwroot\js\forms\general.min.js" />
+    <None Include="wwwroot\js\forms\image-cropping.js" />
+    <None Include="wwwroot\js\forms\image-cropping.min.js" />
+    <None Include="wwwroot\js\forms\uploads.js" />
+    <None Include="wwwroot\js\forms\uploads.min.js" />
+    <None Include="wwwroot\js\forms\validation.js" />
+    <None Include="wwwroot\js\forms\validation.min.js" />
+    <None Include="wwwroot\js\forms\wizard.js" />
+    <None Include="wwwroot\js\forms\wizard.min.js" />
+    <None Include="wwwroot\js\layouts\panel-transition.js" />
+    <None Include="wwwroot\js\layouts\panel-transition.min.js" />
+    <None Include="wwwroot\js\pages\code-editor.js" />
+    <None Include="wwwroot\js\pages\code-editor.min.js" />
+    <None Include="wwwroot\js\pages\faq.js" />
+    <None Include="wwwroot\js\pages\faq.min.js" />
+    <None Include="wwwroot\js\pages\gallery.js" />
+    <None Include="wwwroot\js\pages\gallery.min.js" />
+    <None Include="wwwroot\js\pages\landing.js" />
+    <None Include="wwwroot\js\pages\landing.min.js" />
+    <None Include="wwwroot\js\pages\map-google.js" />
+    <None Include="wwwroot\js\pages\map-google.min.js" />
+    <None Include="wwwroot\js\pages\map-point.js" />
+    <None Include="wwwroot\js\pages\map-point.min.js" />
+    <None Include="wwwroot\js\pages\map-vector.js" />
+    <None Include="wwwroot\js\pages\map-vector.min.js" />
+    <None Include="wwwroot\js\pages\profile-v2.js" />
+    <None Include="wwwroot\js\pages\profile-v2.min.js" />
+    <None Include="wwwroot\js\pages\profile_v3.js" />
+    <None Include="wwwroot\js\pages\profile_v3.min.js" />
+    <None Include="wwwroot\js\pages\project.js" />
+    <None Include="wwwroot\js\pages\project.min.js" />
+    <None Include="wwwroot\js\Plugin\menu.js" />
+    <None Include="wwwroot\js\Plugin\menu.min.js" />
+    <None Include="wwwroot\js\Plugin\skintools.js" />
+    <None Include="wwwroot\js\Plugin\skintools.min.js" />
+    <None Include="wwwroot\js\Section\GridMenu.js" />
+    <None Include="wwwroot\js\Section\GridMenu.min.js" />
+    <None Include="wwwroot\js\Section\Menubar.js" />
+    <None Include="wwwroot\js\Section\Menubar.min.js" />
+    <None Include="wwwroot\js\Section\PageAside.js" />
+    <None Include="wwwroot\js\Section\PageAside.min.js" />
+    <None Include="wwwroot\js\Section\Sidebar.js" />
+    <None Include="wwwroot\js\Section\Sidebar.min.js" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\js\site.min.js" />
+    <None Include="wwwroot\js\structure\timeline.js" />
+    <None Include="wwwroot\js\structure\timeline.min.js" />
+    <None Include="wwwroot\js\tables\bootstrap.js" />
+    <None Include="wwwroot\js\tables\bootstrap.min.js" />
+    <None Include="wwwroot\js\tables\datatable.js" />
+    <None Include="wwwroot\js\tables\datatable.min.js" />
+    <None Include="wwwroot\js\tables\editable.js" />
+    <None Include="wwwroot\js\tables\editable.min.js" />
+    <None Include="wwwroot\js\tables\footable.js" />
+    <None Include="wwwroot\js\tables\footable.min.js" />
+    <None Include="wwwroot\js\tables\jqtabledit.js" />
+    <None Include="wwwroot\js\tables\jqtabledit.min.js" />
+    <None Include="wwwroot\js\tables\jsgrid-db.js" />
+    <None Include="wwwroot\js\tables\jsgrid-db.min.js" />
+    <None Include="wwwroot\js\tables\jsgrid.js" />
+    <None Include="wwwroot\js\tables\jsgrid.min.js" />
+    <None Include="wwwroot\js\tables\table-dragger.js" />
+    <None Include="wwwroot\js\tables\table-dragger.min.js" />
+    <None Include="wwwroot\js\uikit\button.js" />
+    <None Include="wwwroot\js\uikit\button.min.js" />
+    <None Include="wwwroot\js\uikit\carousel.js" />
+    <None Include="wwwroot\js\uikit\carousel.min.js" />
+    <None Include="wwwroot\js\uikit\dropdown.js" />
+    <None Include="wwwroot\js\uikit\dropdown.min.js" />
+    <None Include="wwwroot\js\uikit\icon.js" />
+    <None Include="wwwroot\js\uikit\icon.min.js" />
+    <None Include="wwwroot\js\uikit\list.js" />
+    <None Include="wwwroot\js\uikit\list.min.js" />
+    <None Include="wwwroot\js\uikit\panel-actions.js" />
+    <None Include="wwwroot\js\uikit\panel-actions.min.js" />
+    <None Include="wwwroot\js\uikit\panel-structure.js" />
+    <None Include="wwwroot\js\uikit\panel-structure.min.js" />
+    <None Include="wwwroot\js\uikit\progress-bars.js" />
+    <None Include="wwwroot\js\uikit\progress-bars.min.js" />
+    <None Include="wwwroot\js\uikit\tooltip-popover.js" />
+    <None Include="wwwroot\js\uikit\tooltip-popover.min.js" />
+    <None Include="wwwroot\js\widgets\chart.js" />
+    <None Include="wwwroot\js\widgets\chart.min.js" />
+    <None Include="wwwroot\js\widgets\weather.js" />
+    <None Include="wwwroot\js\widgets\weather.min.js" />
+  </ItemGroup>
+
+</Project>
